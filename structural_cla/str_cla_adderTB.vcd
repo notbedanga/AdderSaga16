@@ -1,0 +1,215 @@
+$date
+	Wed Sep  3 12:34:48 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module adderTest $end
+$var wire 1 ! zero $end
+$var wire 1 " sign $end
+$var wire 1 # parity $end
+$var wire 1 $ overflow $end
+$var wire 1 % carry $end
+$var wire 16 & c [15:0] $end
+$var reg 16 ' a [15:0] $end
+$var reg 16 ( b [15:0] $end
+$scope module DUT $end
+$var wire 1 $ overflow $end
+$var wire 16 ) x [15:0] $end
+$var wire 16 * y [15:0] $end
+$var wire 1 ! zero $end
+$var wire 16 + z [15:0] $end
+$var wire 1 " sign $end
+$var wire 1 # parity $end
+$var wire 1 % carry $end
+$scope module A0 $end
+$var wire 4 , a [3:0] $end
+$var wire 4 - b [3:0] $end
+$var wire 1 . cin $end
+$var wire 1 / cout $end
+$var wire 4 0 s [3:0] $end
+$upscope $end
+$scope module A1 $end
+$var wire 4 1 a [3:0] $end
+$var wire 4 2 b [3:0] $end
+$var wire 1 / cin $end
+$var wire 1 3 cout $end
+$var wire 4 4 s [3:0] $end
+$upscope $end
+$scope module A2 $end
+$var wire 4 5 a [3:0] $end
+$var wire 4 6 b [3:0] $end
+$var wire 1 3 cin $end
+$var wire 1 7 cout $end
+$var wire 4 8 s [3:0] $end
+$upscope $end
+$scope module A3 $end
+$var wire 4 9 a [3:0] $end
+$var wire 4 : b [3:0] $end
+$var wire 1 7 cin $end
+$var wire 1 % cout $end
+$var wire 4 ; s [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx ;
+bx :
+bx 9
+bx 8
+x7
+bx 6
+bx 5
+bx 4
+x3
+bx 2
+bx 1
+bx 0
+x/
+0.
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+bx '
+bx &
+x%
+x$
+x#
+x"
+x!
+$end
+#5
+1#
+1$
+07
+b1111 8
+03
+0"
+b1111 4
+0/
+b0 ;
+1%
+0!
+b111111111111 &
+b111111111111 +
+b1111 0
+b0 -
+b0 2
+b0 6
+b1000 :
+b1111 ,
+b1111 1
+b1111 5
+b1000 9
+b1000000000000000 (
+b1000000000000000 *
+b1000111111111111 '
+b1000111111111111 )
+#10
+17
+b0 8
+13
+b0 4
+1/
+0%
+0$
+b0 0
+0#
+b111000000000000 &
+b111000000000000 +
+b111 ;
+b10 -
+b0 :
+b1110 ,
+b110 9
+b10 (
+b10 *
+b110111111111110 '
+b110111111111110 )
+#15
+07
+b1111 8
+03
+b1111 4
+0%
+0/
+1"
+b1111 0
+1#
+b1111111111111111 &
+b1111111111111111 +
+b1111 ;
+b101 -
+b101 2
+b101 6
+b101 :
+b1010 ,
+b1010 1
+b1010 5
+b1010 9
+b101010101010101 (
+b101010101010101 *
+b1010101010101010 '
+b1010101010101010 )
+#20
+0"
+1!
+1%
+b0 ;
+17
+b0 8
+13
+b0 4
+1/
+1#
+b0 &
+b0 +
+b0 0
+b1 -
+b0 2
+b0 6
+b0 :
+b1111 ,
+b1111 1
+b1111 5
+b1111 9
+b1 (
+b1 *
+b1111111111111111 '
+b1111111111111111 )
+#25
+0$
+0/
+03
+07
+0%
+0"
+b0 0
+b0 4
+b0 8
+1#
+1!
+b0 &
+b0 +
+b0 ;
+b0 -
+b0 ,
+b0 1
+b0 5
+b0 9
+b0 (
+b0 *
+b0 '
+b0 )
+#30

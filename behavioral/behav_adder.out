@@ -1,0 +1,76 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x124109e90 .scope module, "behav_16Adder" "behav_16Adder" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "x";
+    .port_info 1 /INPUT 16 "y";
+    .port_info 2 /OUTPUT 16 "z";
+    .port_info 3 /OUTPUT 1 "sign";
+    .port_info 4 /OUTPUT 1 "zero";
+    .port_info 5 /OUTPUT 1 "carry";
+    .port_info 6 /OUTPUT 1 "parity";
+    .port_info 7 /OUTPUT 1 "overflow";
+L_0x12411ed80 .functor AND 1, L_0x12411ebf0, L_0x12411ece0, C4<1>, C4<1>;
+L_0x12411ef70 .functor NOT 1, L_0x12411ee70, C4<0>, C4<0>, C4<0>;
+L_0x12411efe0 .functor AND 1, L_0x12411ed80, L_0x12411ef70, C4<1>, C4<1>;
+L_0x12411f170 .functor NOT 1, L_0x12411f0d0, C4<0>, C4<0>, C4<0>;
+L_0x12411f330 .functor NOT 1, L_0x12411f220, C4<0>, C4<0>, C4<0>;
+L_0x12411f3d0 .functor AND 1, L_0x12411f170, L_0x12411f330, C4<1>, C4<1>;
+L_0x12411f560 .functor AND 1, L_0x12411f3d0, L_0x12411f4c0, C4<1>, C4<1>;
+L_0x12411f690 .functor OR 1, L_0x12411efe0, L_0x12411f560, C4<0>, C4<0>;
+L_0x118068058 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x12410a180_0 .net *"_ivl_10", 0 0, L_0x118068058;  1 drivers
+v0x12411d0f0_0 .net *"_ivl_11", 16 0, L_0x12411e7a0;  1 drivers
+v0x12411d190_0 .net *"_ivl_20", 0 0, L_0x12411ebf0;  1 drivers
+v0x12411d240_0 .net *"_ivl_22", 0 0, L_0x12411ece0;  1 drivers
+v0x12411d2f0_0 .net *"_ivl_23", 0 0, L_0x12411ed80;  1 drivers
+v0x12411d3e0_0 .net *"_ivl_26", 0 0, L_0x12411ee70;  1 drivers
+v0x12411d490_0 .net *"_ivl_27", 0 0, L_0x12411ef70;  1 drivers
+v0x12411d540_0 .net *"_ivl_29", 0 0, L_0x12411efe0;  1 drivers
+v0x12411d5f0_0 .net *"_ivl_3", 16 0, L_0x12411e520;  1 drivers
+v0x12411d700_0 .net *"_ivl_32", 0 0, L_0x12411f0d0;  1 drivers
+v0x12411d7b0_0 .net *"_ivl_33", 0 0, L_0x12411f170;  1 drivers
+v0x12411d860_0 .net *"_ivl_36", 0 0, L_0x12411f220;  1 drivers
+v0x12411d910_0 .net *"_ivl_37", 0 0, L_0x12411f330;  1 drivers
+v0x12411d9c0_0 .net *"_ivl_39", 0 0, L_0x12411f3d0;  1 drivers
+v0x12411da70_0 .net *"_ivl_42", 0 0, L_0x12411f4c0;  1 drivers
+v0x12411db20_0 .net *"_ivl_43", 0 0, L_0x12411f560;  1 drivers
+L_0x118068010 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x12411dbd0_0 .net *"_ivl_6", 0 0, L_0x118068010;  1 drivers
+v0x12411dd60_0 .net *"_ivl_7", 16 0, L_0x12411e660;  1 drivers
+v0x12411ddf0_0 .net "carry", 0 0, L_0x12411e3e0;  1 drivers
+v0x12411de90_0 .net "overflow", 0 0, L_0x12411f690;  1 drivers
+v0x12411df30_0 .net "parity", 0 0, L_0x12411ead0;  1 drivers
+v0x12411dfd0_0 .net "sign", 0 0, L_0x12411e910;  1 drivers
+o0x118030430 .functor BUFZ 16, C4<zzzzzzzzzzzzzzzz>; HiZ drive
+v0x12411e070_0 .net "x", 15 0, o0x118030430;  0 drivers
+o0x118030460 .functor BUFZ 16, C4<zzzzzzzzzzzzzzzz>; HiZ drive
+v0x12411e120_0 .net "y", 15 0, o0x118030460;  0 drivers
+v0x12411e1d0_0 .net "z", 15 0, L_0x12411e480;  1 drivers
+v0x12411e280_0 .net "zero", 0 0, L_0x12411e9f0;  1 drivers
+L_0x12411e3e0 .part L_0x12411e7a0, 16, 1;
+L_0x12411e480 .part L_0x12411e7a0, 0, 16;
+L_0x12411e520 .concat [ 16 1 0 0], o0x118030430, L_0x118068010;
+L_0x12411e660 .concat [ 16 1 0 0], o0x118030460, L_0x118068058;
+L_0x12411e7a0 .arith/sum 17, L_0x12411e520, L_0x12411e660;
+L_0x12411e910 .part L_0x12411e480, 15, 1;
+L_0x12411e9f0 .reduce/nor L_0x12411e480;
+L_0x12411ead0 .reduce/xnor L_0x12411e480;
+L_0x12411ebf0 .part o0x118030430, 15, 1;
+L_0x12411ece0 .part o0x118030460, 15, 1;
+L_0x12411ee70 .part L_0x12411e480, 15, 1;
+L_0x12411f0d0 .part o0x118030430, 15, 1;
+L_0x12411f220 .part o0x118030460, 15, 1;
+L_0x12411f4c0 .part L_0x12411e480, 15, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "behav_adder.v";
